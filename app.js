@@ -6,13 +6,15 @@ sequelize.sync().then(async () => {
   // // Write your Model queries here
 
   // // Create a record
-  // await models.Cat.create(
-  //   {
-  //     name: 'tabatha',
-  //     breed: 'Bombay',
-  //     owner: 'Ed'
-  //   }
-  // )
+  const cat = await models.Cat.create(
+    {
+      name: 'tabatha',
+      breed: 'Bombay',
+      owner: 'Ed'
+    }
+  )
+  console.log("Cat Name:", cat.name);
+
   // // Find a record
   // const cats = await models.Cat.findAll({
   //   where: {
